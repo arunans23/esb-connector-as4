@@ -1,0 +1,70 @@
+{
+  "connectorName": "as4",
+  "operationName": "send",
+  "title": "Send AS4 Message",
+  "help": "Sends an AS4 message using a PMode agreement.",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "configRef",
+              "displayName": "AS4 Connection",
+              "inputType": "connection",
+              "allowedConnectionTypes": ["AS4"],
+              "defaultType": "connection.AS4",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "AS4 connection to be used."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "pmode",
+              "displayName": "PMode Agreement",
+              "inputType": "stringOrExpression",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "The reference PMode agreement."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Output",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "responseVariable",
+              "displayName": "Output Variable Name",
+              "inputType": "string",
+              "deriveResponseVariable": true,
+              "required": "true",
+              "helpTip": "Name of the variable to which the output of the operation should be assigned."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "overwriteBody",
+              "displayName": "Replace Message Body",
+              "inputType": "checkbox",
+              "defaultValue": "false",
+              "helpTip": "Replace the Message Body in Message Context with the output of the operation (This will remove the payload from the above variable).",
+              "required": "false"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Output Schema for AS4 Send Operation",
+  "description": "Output schema for the AS4 send operation.",
+  "properties": {
+    "payload": {
+      "type": "object",
+      "description": "The response payload from the send operation, if any."
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Metadata about the send operation.",
+      "properties": {
+         "SEND_SUCCESS": {
+             "type": "boolean",
+             "description": "Indicates whether the AS4 message was sent successfully."
+         }
+      }
+    }
+  },
+  "required": [
+    "attributes"
+  ],
+  "additionalProperties": false
+}

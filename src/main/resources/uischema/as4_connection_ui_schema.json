@@ -1,0 +1,38 @@
+{
+  "connectionName": "AS4",
+  "connectionType": "AS4",
+  "title": "AS4 Connection",
+  "help": "Defines an AS4 connection with username and password.",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "General",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "username",
+              "displayName": "Username",
+              "inputType": "string",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Username for the AS4 connection."
+            }
+          },
+          {
+            "type": "attribute",
+            "value": {
+              "name": "password",
+              "displayName": "Password",
+              "inputType": "password",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Password for the AS4 connection."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

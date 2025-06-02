@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Output Schema for AS4 Receive Operation",
+  "description": "Output schema for the AS4 receive operation.",
+  "properties": {
+    "payload": {
+      "type": "object",
+      "description": "The received AS4 message payload."
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Metadata about the received message.",
+      "properties": {
+        "MESSAGE_ID": {
+          "type": "string",
+          "description": "The ID of the received AS4 message."
+        },
+        "FROM_PARTY_ID": {
+          "type": "string",
+          "description": "Identifier of the party who sent the message."
+        },
+        "TO_PARTY_ID": {
+          "type": "string",
+          "description": "Identifier of the party intended to receive the message."
+        }
+      }
+    }
+  },
+  "required": [
+    "payload",
+    "attributes"
+  ],
+  "additionalProperties": false
+}

@@ -15,8 +15,10 @@
    specific language governing permissions and limitations
    under the License.
 -->
-<template xmlns="http://ws.apache.org/ns/synapse" name="receive">
+<template xmlns="http://ws.apache.org/ns/synapse" name="receive" displayName="as4">
     <parameter name="dataIn" description="The folder location to save the incoming messages and payloads"/>
+    <parameter name="responseVariable" description="The name of the variable to which the output should be stored."/>
+    <parameter name="overwriteBody" description="Replace the Message Body in Message Context with the response of the operation."/>
     <sequence>
         <property name="dataIn" expression="$func:dataIn"/>
         <class name="org.wso2.carbon.mediation.connector.AS4Receiver" />

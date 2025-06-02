@@ -1,18 +1,50 @@
 {
     "name": "AS4",
     "owner": "WSO2",
+    "product": "MI",
     "category": "Other",
     "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/AS4+Connector",
+    "mavenGroupId": "org.wso2.integration.connector",
+    "mavenArtifactId": "mi-connector-as4",
     "description": "The AS4 connector is compliant with the AS4 minimal client conformance profile defined in the AS4 profile of ebMS 3.0. It allows exchanging any type of payload (e.g., XML, JSON, Binary, etc.) as SOAP attachments or SOAP body payloads.",
-    "status": "Inactive",
+    "status": "Active",
+    "rank": 10,
+    "type": "Connector",
     "labels": [
-        "connector"
+        "connector",
+        "as4",
+        "ebms3"
     ],
     "releases": [
         {
-            "tagName": "v1.0.0",
+            "tagName": "v1.1.0",
             "products": [
-                "EI 6.1.1"
+                "MI 4.4.0",
+                "MI 4.3.0",
+                "MI 4.2.0"
+            ],
+            "operations": [
+                {
+                    "name": "init",
+                    "description": "AS4 Connection Configuration",
+                    "isHidden": true
+                },
+                {
+                    "name": "Send AS4 Message",
+                    "description": "Send AS4 Message",
+                    "isHidden": false
+                },
+                {
+                    "name": "Receive AS4 Message",
+                    "description": "Receive AS4 Message",
+                    "isHidden": false
+                }
+            ],
+            "connections": [
+                {
+                    "name": "AS4",
+                    "description": "AS4 Connection using Username and Password."
+                }
             ],
             "isHidden": false
         }

@@ -15,8 +15,10 @@
    specific language governing permissions and limitations
    under the License.
 -->
-<template xmlns="http://ws.apache.org/ns/synapse" name="send">
+<template xmlns="http://ws.apache.org/ns/synapse" name="send" displayName="as4">
     <parameter name="pmode" description="The reference PMode agreement"/>
+    <parameter name="responseVariable" description="The name of the variable to which the output should be stored."/>
+    <parameter name="overwriteBody" description="Replace the Message Body in Message Context with the response of the operation."/>
     <sequence>
         <property name="pmode" expression="$func:pmode"/>
         <class name="org.wso2.carbon.mediation.connector.AS4Sender"/>

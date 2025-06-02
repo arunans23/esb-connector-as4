@@ -19,10 +19,12 @@
 <component name="as4" type="synapse/template" >
     <subComponents> 
 		<component name="send" >
+			<displayName>Send AS4 Message</displayName>
 	    		<file>send-template.xml</file>
 	    		<description>Send AS4 Message</description>
 		</component>
 		<component name="receive">
+			<displayName>Receive AS4 Message</displayName>
 			<file>receive-template.xml</file>
 			<description>Receive AS4 Message</description>
 		</component>
